@@ -5,8 +5,8 @@
 }
 
 body {
-  background-color: rgb(156, 175, 174);
-  color: #333;
+  background-color: #4e4b5c;
+  color: #c2d3cd;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -14,22 +14,26 @@ body {
 }
 
 header {
-  background-color: azure;
+  background-color: #847e89;
   padding: 30px 20px;
 }
 
 .cardsDisplay {
+  flex: 1;
+  margin-top: 26px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 26px));
   padding: 20px;
-  gap: 16px;
+  gap: 26px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: #afbfc0;
+  color: #56494c;
   height: 300px;
   width: 200px;
   border-radius: 8px;
@@ -50,7 +54,6 @@ header {
 
 footer {
   width: 100%;
-  position: absolute;
-  bottom: 10px;
   text-align: center;
+  padding: 60px 0 20px;
 }
