@@ -13,22 +13,17 @@ const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
         close
       </span>
       <h2>{name}</h2>
+
       <div className="likesDisplay">
-        <span
-          onClick={addLike}
-          className="material-symbols-outlined likeButton"
-        >
-          thumb_up
-        </span>
+        <button onClick={addLike} className="likeButtons">
+          <span className="material-symbols-outlined">thumb_up</span>
+        </button>
         <div className="likesMiddle">
           <span className="material-symbols-outlined">favorite</span> {likes}
         </div>
-        <span
-          onClick={removeLike}
-          className="material-symbols-outlined likeButton"
-        >
-          thumb_down
-        </span>
+        <button onClick={removeLike} className="likeButtons">
+          <span className="material-symbols-outlined">thumb_down</span>
+        </button>
       </div>
     </div>
   );
