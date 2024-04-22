@@ -42,6 +42,7 @@ main {
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: #847e89;
   color: #c2d3cd;
@@ -79,6 +80,7 @@ footer {
   width: 80%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
 .likeButton {

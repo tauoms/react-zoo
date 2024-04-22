@@ -1,9 +1,13 @@
 import Card from "./Card";
 import { animals } from "../animalsList";
+import { useState } from "react";
+
+// const [animalsArr, setAnimalsArr] = useState(...animals);
 
 const CardsDisplay = () => {
   const addLike = (name) => {
     console.log(`${name} addLike button clicked`);
+    // console.log(animalsArr);
   };
   const removeLike = (name) => {
     console.log(`${name} removeLike button clicked`);
