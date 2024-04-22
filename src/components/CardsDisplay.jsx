@@ -5,18 +5,16 @@ import { useState } from "react";
 const CardsDisplay = () => {
   const [animalsArr, setAnimalsArr] = useState(animals);
 
-  const addLike = (name) => {
-    console.log(`${name} addLike button clicked`);
-    // console.log(animalsArr);
+  const addLike = (animal) => {
+    console.log(`${animal} addLike button clicked`);
+    // setAnimalsArr((prevState) => ({ ...prevState, [name]: like }));
   };
-  const removeLike = (name) => {
-    console.log(`${name} removeLike button clicked`);
+  const removeLike = (animal) => {
+    console.log(`${animal} removeLike button clicked`);
   };
-  const removeCard = (name) => {
-    console.log(`${name} removeCard button clicked`);
-    const updatedAnimalsArr = animalsArr.filter(
-      (animal) => animal.name !== name
-    );
+  const removeCard = (animal) => {
+    console.log(`${animal} removeCard button clicked`);
+    const updatedAnimalsArr = animalsArr.filter((item) => item.name !== animal);
     setAnimalsArr(updatedAnimalsArr);
   };
 
