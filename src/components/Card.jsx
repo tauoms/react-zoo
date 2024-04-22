@@ -2,16 +2,17 @@ const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
   // let capitalizedName = name.slice(0, 1).toUpperCase() + name.slice(1);
   return (
     <div className="card">
-      <img
-        src={`https://source.unsplash.com/random/400×400/?${name}`}
-        alt={`Photo of ${name}`}
-      />
-      <span
-        onClick={removeCard}
-        className="material-symbols-outlined removeButton"
-      >
-        close
-      </span>
+      <div className="imgcontainer">
+        <img
+          src={`https://source.unsplash.com/random/400×400/?${name}`}
+          alt={`Photo of ${name}`}
+        />
+      </div>
+      <button onClick={removeCard} className="removeButton">
+        <span onClick={removeCard} className="material-symbols-outlined">
+          close
+        </span>
+      </button>
       <h2>{name}</h2>
 
       <div className="likesDisplay">
