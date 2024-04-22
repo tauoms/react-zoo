@@ -18,9 +18,9 @@ const CardsDisplay = (name) => {
         <Card
           key={animal.name}
           {...animal}
-          addLike={addLike}
-          removeLike={removeLike}
-          removeCard={removeCard}
+          addLike={() => addLike(animal.name)}
+          removeLike={() => removeLike(name)}
+          removeCard={() => removeCard(animal.name)}
         />
       ))}
     </main>
