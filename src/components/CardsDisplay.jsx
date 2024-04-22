@@ -3,11 +3,11 @@ import { animals } from "../animalsList";
 
 const CardsDisplay = () => {
   return (
-    <div className="cardsDisplay">
+    <main>
       {animals.map((animal) => (
         <Card key={animal.name} {...animal} />
       ))}
-    </div>
+    </main>
   );
 };
 
