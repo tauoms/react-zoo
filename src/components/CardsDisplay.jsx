@@ -1,15 +1,15 @@
 import Card from "./Card";
 import { animals } from "../animalsList";
 
-const CardsDisplay = () => {
-  const addLike = () => {
-    console.log("addLike button clicked");
+const CardsDisplay = (name) => {
+  const addLike = (name) => {
+    console.log(`${name} addLike button clicked`);
   };
-  const removeLike = () => {
-    console.log("removeLike button clicked");
+  const removeLike = (name) => {
+    console.log(`${name} removeLike button clicked`);
   };
-  const removeCard = () => {
-    console.log("removeCard button clicked");
+  const removeCard = (name) => {
+    console.log(`${name} removeCard button clicked`);
   };
 
   return (

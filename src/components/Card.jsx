@@ -4,7 +4,7 @@ const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
     <div className="card">
       <img src={`https://source.unsplash.com/random/400×400/?${name}`} />
       <span
-        onClick={removeCard}
+        onClick={() => removeCard(name)}
         className="material-symbols-outlined removeButton"
       >
         close
@@ -12,7 +12,7 @@ const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
       <h2>{capitalizedName}</h2>
       <div className="likesDisplay">
         <span
-          onClick={addLike}
+          onClick={() => addLike(name)}
           className="material-symbols-outlined likeButton"
         >
           thumb_up
@@ -21,7 +21,7 @@ const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
           <span className="material-symbols-outlined">favorite</span> {likes}
         </div>
         <span
-          onClick={removeLike}
+          onClick={() => removeLike(name)}
           className="material-symbols-outlined likeButton"
         >
           thumb_down
