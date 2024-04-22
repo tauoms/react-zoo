@@ -1,7 +1,7 @@
 import Card from "./Card";
 import { animals } from "../animalsList";
 
-const CardsDisplay = (name) => {
+const CardsDisplay = () => {
   const addLike = (name) => {
     console.log(`${name} addLike button clicked`);
   };
@@ -19,7 +19,7 @@ const CardsDisplay = (name) => {
           key={animal.name}
           {...animal}
           addLike={() => addLike(animal.name)}
-          removeLike={() => removeLike(name)}
+          removeLike={() => removeLike(animal.name)}
           removeCard={() => removeCard(animal.name)}
         />
       ))}
