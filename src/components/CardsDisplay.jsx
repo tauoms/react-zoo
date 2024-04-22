@@ -2,9 +2,9 @@ import Card from "./Card";
 import { animals } from "../animalsList";
 import { useState } from "react";
 
-// const [animalsArr, setAnimalsArr] = useState(...animals);
-
 const CardsDisplay = () => {
+  const [animalsArr, setAnimalsArr] = useState(animals);
+
   const addLike = (name) => {
     console.log(`${name} addLike button clicked`);
     // console.log(animalsArr);
@@ -14,11 +14,15 @@ const CardsDisplay = () => {
   };
   const removeCard = (name) => {
     console.log(`${name} removeCard button clicked`);
+    const updatedAnimalsArr = animalsArr.filter(
+      (animal) => animal.name !== name
+    );
+    setAnimalsArr(updatedAnimalsArr);
   };
 
   return (
     <main>
-      {animals.map((animal) => (
+      {animalsArr.map((animal) => (
         <Card
           key={animal.name}
           {...animal}
