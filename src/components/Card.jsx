@@ -1,5 +1,3 @@
-import React from "react";
-
 const Card = ({ name }) => {
   let capitalizedName = name.slice(0, 1).toUpperCase() + name.slice(1);
   return (
