@@ -1,5 +1,5 @@
 const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
-  let capitalizedName = name.slice(0, 1).toUpperCase() + name.slice(1);
+  // let capitalizedName = name.slice(0, 1).toUpperCase() + name.slice(1);
   return (
     <div className="card">
       <img
@@ -12,7 +12,7 @@ const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
       >
         close
       </span>
-      <h2>{capitalizedName}</h2>
+      <h2>{name}</h2>
       <div className="likesDisplay">
         <span
           onClick={addLike}
