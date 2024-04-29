@@ -39,7 +39,7 @@ a.active {
   font-size: 6rem;
   font-weight: 900;
   mix-blend-mode: difference;
-  transition: 0.3s ease;
+  transition: 0.5s ease-out;
 }
 
 #HomePage a:hover {
@@ -82,6 +82,10 @@ header button {
   padding: 6px;
   border: 1px solid #c2d3cd;
   margin-right: 12px;
+}
+
+header input[type="text"] {
+  background-color: #e4e0f2;
 }
 
 main {
