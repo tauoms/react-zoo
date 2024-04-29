@@ -1,15 +1,28 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import CardsDisplay from "./components/CardsDisplay";
+import Root from "./Root";
+import AnimalsDisplay from "./pages/AnimalsDisplay";
+import BirdsDisplay from "./pages/BirdsDisplay";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <CardsDisplay />
-      <Footer />
-    </>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      // errorElement: <ErrorPage />,
+      element: <HomePage />,
+    },
+    {
+      path: "/",
+      // errorElement: <ErrorPage />,
+      element: <Root />,
+      children: [
+        { path: "/animals", element: <AnimalsDisplay /> },
+        { path: "/birds", element: <BirdsDisplay /> },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

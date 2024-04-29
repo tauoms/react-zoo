@@ -13,12 +13,31 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+a {
+  color: #c2d3cd;
+  text-decoration: none;
+}
+
+a.active {
+  color: #c2d3cd;
+  font-weight: 700;
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #847e89;
   padding: 30px 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
 }
 
 header input,

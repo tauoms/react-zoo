@@ -1,9 +1,9 @@
-import Card from "./Card";
-import { animals } from "../animalsList";
+import Card from "../components/Card";
+import { birds } from "../animalsList";
 import { useState } from "react";
 
 const CardsDisplay = () => {
-  const [animalsArr, setAnimalsArr] = useState(animals);
+  const [animalsArr, setAnimalsArr] = useState(birds);
 
   const likesHandler = (animal, action) => {
     console.log(`${animal} ${action} button clicked`);
@@ -30,7 +30,7 @@ const CardsDisplay = () => {
   };
 
   return (
-    <main>
+    <>
       {animalsArr.map((animal) => (
         <Card
           key={animal.name}
@@ -40,7 +40,7 @@ const CardsDisplay = () => {
           removeCard={() => removeCard(animal.name)}
         />
       ))}
-    </main>
+    </>
   );
 };
 
