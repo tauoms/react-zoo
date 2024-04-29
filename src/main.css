@@ -110,6 +110,7 @@ main {
 .imgcontainer {
   width: 240px;
   height: 200px;
+  margin-bottom: 0.3rem;
 }
 
 .card img {
@@ -140,13 +141,15 @@ footer {
   width: 80%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
 }
 
 .likesMiddle {
+  width: 25%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  font-weight: 600;
+  font-size: larger;
 }
 
 .removeButton,
@@ -164,7 +167,7 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -190px;
+  top: -195px;
   left: 90px;
   z-index: 1;
 }
