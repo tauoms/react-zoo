@@ -20,7 +20,14 @@ const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
           <span className="material-symbols-outlined">thumb_up</span>
         </button>
         <div className="likesMiddle">
-          <span className="material-symbols-outlined">favorite</span> {likes}
+          <span
+            className={
+              "material-symbols-outlined " + (likes > 5 ? "likesRed" : "")
+            }
+          >
+            {likes >= 0 ? "favorite" : "heart_broken"}
+          </span>{" "}
+          {likes}
         </div>
         <button onClick={removeLike} className="likeButtons">
           <span className="material-symbols-outlined">thumb_down</span>

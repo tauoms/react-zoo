@@ -137,6 +137,14 @@ footer {
   font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 24;
 }
 
+.likesRed {
+  color: rgb(179, 49, 49);
+  background: -webkit-linear-gradient(#f02476, #661861);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .likesDisplay {
   width: 80%;
   display: flex;
