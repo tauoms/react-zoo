@@ -23,6 +23,42 @@ a.active {
   font-weight: 700;
 }
 
+#HomePage {
+  position: relative;
+  width: 100vw;
+  display: flex;
+}
+
+#HomePage img {
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#HomePage a {
+  font-size: 6rem;
+  font-weight: 900;
+  mix-blend-mode: difference;
+  transition: 0.3s ease;
+}
+
+#HomePage a:hover {
+  font-weight: 500;
+  text-decoration: dotted;
+}
+
+#HomePage a:first-child {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+
+#HomePage a:nth-child(2) {
+  position: absolute;
+  right: 20%;
+  top: 5%;
+}
+
 header {
   display: flex;
   align-items: center;
