@@ -15,7 +15,11 @@ function App() {
   };
 
   const removeHandler = (name, category) => {
-    console.log(name, category, `removeHandler button clicked`);
+    // console.log(name, category, `removeHandler button clicked`);
+    setZoo((prevZoo) => ({
+      ...prevZoo,
+      [category]: prevZoo[category].filter((el) => el.name !== name),
+    }));
   };
 
   const router = createBrowserRouter([
