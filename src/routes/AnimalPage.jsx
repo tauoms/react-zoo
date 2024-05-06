@@ -5,8 +5,6 @@ const AnimalPage = ({ ...rest }) => {
   const categoryItems = rest[params.category];
   const data = categoryItems.find((el) => el.name === params.name);
 
-  console.log(data);
-
   return (
     <div id="AnimalPage">
       <h2>{data.name} Page</h2>
