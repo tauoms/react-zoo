@@ -25,38 +25,48 @@ a.active {
 
 #HomePage {
   position: relative;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
 }
 
-#HomePage img {
-  width: 50vw;
-  height: 100vh;
+#HomePage .row div img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
+#HomePage .row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#HomePage .row div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #HomePage a {
-  font-size: 6rem;
-  font-weight: 900;
-  mix-blend-mode: difference;
-  transition: 0.5s ease-out;
+  font-size: 5rem;
+  font-weight: 600;
+  /* mix-blend-mode: difference; */
+  transition: 0.3s ease-out;
+  color: #fff;
+  text-shadow: #000 0px 0px 5px;
+  -webkit-font-smoothing: antialiased;
 }
 
 #HomePage a:hover {
-  font-weight: 500;
-  text-decoration: dotted;
+  color: #c194ef;
 }
 
-#HomePage a:first-child {
+#HomePage a {
   position: absolute;
-  left: 10%;
-  top: 5%;
-}
-
-#HomePage a:nth-child(2) {
-  position: absolute;
-  right: 20%;
-  top: 5%;
 }
 
 #AnimalPage {

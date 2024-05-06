@@ -36,7 +36,7 @@ const Header = ({ search }) => {
               <NavLink to="/insects">Insects</NavLink>
             </li>
             <li>
-              <NavLink to="/fishes">Fishes</NavLink>
+              <NavLink to="/fishes">Fish</NavLink>
             </li>
             <li>
               <NavLink to="/about">About</NavLink>
