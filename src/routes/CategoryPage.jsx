@@ -1,11 +1,16 @@
 import { useParams } from "react-router-dom";
+import Card from "../components/Card";
 
-const CategoryPage = () => {
+const CategoryPage = ({ ...rest }) => {
   let { category } = useParams();
+
+  const categoryItems = rest[category];
 
   return (
     <>
-      <h2>{category} page will be here</h2>
+      {categoryItems.map((item) => (
+        <Card key={item.name} name={item.name} />
+      ))}
     </>
   );
 };
