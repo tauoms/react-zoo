@@ -4,7 +4,7 @@ const AnimalPage = () => {
   let { animalName } = useParams();
 
   return (
-    <>
+    <div id="AnimalPage">
       <h2>{animalName} Page</h2>
       <div className="imgcontainer">
         <img
@@ -12,7 +12,7 @@ const AnimalPage = () => {
           alt={`Photo of ${animalName}`}
         />
       </div>
-    </>
+    </div>
   );
 };
 
