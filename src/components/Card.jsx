@@ -33,7 +33,7 @@ const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
           <span className="material-symbols-outlined">thumb_down</span>
         </button>
       </div>
-      <Link to={`/animals/${name}`}>
+      <Link to={name}>
         <p>More info</p>
       </Link>
     </div>

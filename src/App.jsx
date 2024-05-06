@@ -50,7 +50,7 @@ function App() {
         },
         { path: "/about", element: <AboutPage /> },
         {
-          path: "/:category/:animalName",
+          path: ":category/:animalName",
           element: <AnimalPage />,
         },
       ],
