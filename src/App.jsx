@@ -11,7 +11,15 @@ function App() {
   const [zoo, setZoo] = useState({ animals, birds, insects, fishes });
 
   const likesHandler = (name, category, action) => {
-    console.log(name, category, action, `likesHandler button clicked`);
+    // console.log(name, category, action, `likesHandler button clicked`);
+    setZoo((prevZoo) => ({
+      ...prevZoo,
+      [category]: prevZoo[category].map((el) =>
+        el.name === name
+          ? { ...el, likes: el.likes + (action === "add" ? 1 : -1) }
+          : el
+      ),
+    }));
   };
 
   const removeHandler = (name, category) => {

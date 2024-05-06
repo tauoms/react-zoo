@@ -12,6 +12,7 @@ const CategoryPage = ({ removeCard, removeLike, addLike, ...rest }) => {
         <Card
           key={item.name}
           name={item.name}
+          {...item}
           removeCard={() => removeCard(item.name, category)}
           removeLike={() => removeLike(item.name, category, "remove")}
           addLike={() => addLike(item.name, category, "add")}
