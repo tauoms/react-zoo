@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./routes/HomePage";
 import { useState } from "react";
 import { animals, birds, insects } from "./animalsList";
+import AboutPage from "./routes/AboutPage";
 
 function App() {
   const [zoo, setZoo] = useState({ animals, birds, insects });
@@ -18,6 +19,7 @@ function App() {
       element: <Root />,
       children: [
         { path: ":category", element: <CategoryPage {...zoo} /> },
+        { path: "/about", element: <AboutPage /> },
         // Add about page here
       ],
     },
