@@ -1,15 +1,14 @@
 import Root from "./Root";
-import AnimalsDisplay from "./routes/AnimalsDisplay";
-import BirdsDisplay from "./routes/BirdsDisplay";
 import CategoryPage from "./routes/CategoryPage";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./routes/HomePage";
 import { useState } from "react";
-import { animals, birds, insects } from "./animalsList";
+import { animals, birds, insects, fishes } from "./animalsList";
 import AboutPage from "./routes/AboutPage";
+import AnimalPage from "./routes/AnimalPage";
 
 function App() {
-  const [zoo, setZoo] = useState({ animals, birds, insects });
+  const [zoo, setZoo] = useState({ animals, birds, insects, fishes });
 
   const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
@@ -20,7 +19,10 @@ function App() {
       children: [
         { path: ":category", element: <CategoryPage {...zoo} /> },
         { path: "/about", element: <AboutPage /> },
-        // Add about page here
+        {
+          path: "/animals/:animalName",
+          element: <AnimalPage />,
+        },
       ],
     },
   ]);

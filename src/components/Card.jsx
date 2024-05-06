@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
   // let capitalizedName = name.slice(0, 1).toUpperCase() + name.slice(1);
   return (
@@ -33,6 +35,9 @@ const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
           <span className="material-symbols-outlined">thumb_down</span>
         </button>
       </div>
+      <Link to={`/animals/${name}`}>
+        <p>More info</p>
+      </Link>
     </div>
   );
 };
