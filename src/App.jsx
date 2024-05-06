@@ -1,14 +1,13 @@
 import Root from "./Root";
-import AnimalsDisplay from "./pages/AnimalsDisplay";
-import BirdsDisplay from "./pages/BirdsDisplay";
+import AnimalsDisplay from "./routes/AnimalsDisplay";
+import BirdsDisplay from "./routes/BirdsDisplay";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import HomePage from "./routes/HomePage";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      // errorElement: <ErrorPage />,
       element: <HomePage />,
     },
     {
@@ -18,6 +17,7 @@ function App() {
       children: [
         { path: "/animals", element: <AnimalsDisplay /> },
         { path: "/birds", element: <BirdsDisplay /> },
+        // Add about page here
       ],
     },
   ]);
