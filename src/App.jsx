@@ -50,8 +50,8 @@ function App() {
         },
         { path: "/about", element: <AboutPage /> },
         {
-          path: ":category/:animalName",
-          element: <AnimalPage />,
+          path: ":category/:name",
+          element: <AnimalPage {...zoo} />,
         },
       ],
     },

@@ -1,15 +1,19 @@
 import { useParams } from "react-router-dom";
 
-const AnimalPage = () => {
-  let { animalName } = useParams();
+const AnimalPage = ({ ...rest }) => {
+  const params = useParams();
+  const categoryItems = rest[params.category];
+  const data = categoryItems.find((el) => el.name === params.name);
+
+  console.log(data);
 
   return (
     <div id="AnimalPage">
-      <h2>{animalName} Page</h2>
+      <h2>{data.name} Page</h2>
       <div className="imgcontainer">
         <img
-          src={`https://source.unsplash.com/random/400×400/?${animalName}`}
-          alt={`Photo of ${animalName}`}
+          src={`https://source.unsplash.com/random/400×400/?${data.name}`}
+          alt={`Photo of ${data.name}`}
         />
       </div>
     </div>
