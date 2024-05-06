@@ -117,7 +117,7 @@ main {
   margin-bottom: 0.3rem;
 }
 
-.card img {
+img {
   width: 100%;
   height: 240px;
   object-fit: cover;
