@@ -11,7 +11,7 @@ const HomePage = () => {
       </Link>
       <img
         src={`https://source.unsplash.com/random/400x800/?mammal`}
-        alt={`Photo of an animal`}
+        alt={`Photo of a mammal`}
       />
       <img
         src={`https://source.unsplash.com/random/400x800/?bird`}
