@@ -11,9 +11,7 @@ const Card = ({ name, likes, removeCard, addLike, removeLike }) => {
         />
       </div>
       <button onClick={removeCard} className="removeButton">
-        <span onClick={removeCard} className="material-symbols-outlined">
-          close
-        </span>
+        <span className="material-symbols-outlined">close</span>
       </button>
       <h2>{name}</h2>
 

@@ -10,6 +10,14 @@ import AnimalPage from "./routes/AnimalPage";
 function App() {
   const [zoo, setZoo] = useState({ animals, birds, insects, fishes });
 
+  const likesHandler = (name, category, action) => {
+    console.log(name, category, action, `likesHandler button clicked`);
+  };
+
+  const removeHandler = (name, category) => {
+    console.log(name, category, `removeHandler button clicked`);
+  };
+
   const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
     {
@@ -17,10 +25,20 @@ function App() {
       // errorElement: <ErrorPage />,
       element: <Root />,
       children: [
-        { path: ":category", element: <CategoryPage {...zoo} /> },
+        {
+          path: ":category",
+          element: (
+            <CategoryPage
+              addLike={likesHandler}
+              removeLike={likesHandler}
+              removeCard={removeHandler}
+              {...zoo}
+            />
+          ),
+        },
         { path: "/about", element: <AboutPage /> },
         {
-          path: "/animals/:animalName",
+          path: "/:category/:animalName",
           element: <AnimalPage />,
         },
       ],
