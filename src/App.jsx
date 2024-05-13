@@ -36,7 +36,6 @@ function App() {
       { path: "/", element: <HomePage /> },
       {
         path: "/",
-        // errorElement: <ErrorPage />,
         element: <Root />,
         children: [
           {
@@ -50,7 +49,7 @@ function App() {
               />
             ),
           },
-          { path: "/about", element: <AboutPage /> },
+          { path: "about", element: <AboutPage /> },
           {
             path: ":category/:name",
             element: <AnimalPage {...zoo} />,
