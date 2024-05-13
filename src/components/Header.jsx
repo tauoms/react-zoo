@@ -29,10 +29,6 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <form>
-          <input type="text" placeholder="Search..." />
-          <button>Reset</button>
-        </form>
       </header>
     </>
   );
