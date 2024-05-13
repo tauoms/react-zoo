@@ -3,9 +3,9 @@ const AboutPage = () => {
     <div id="AboutPage">
       <h2>About</h2>
       <p>
-        This is a practice React app with add/remove likes and remove card
-        functionality. Animals can be browsed by category. Each animal has its
-        own page (click "More info" in card).
+        This is a practice React app with add/remove likes, remove card and
+        search functionality. Animals can be browsed by category. Each animal
+        has its own page (click "More info" in card).
       </p>
       <p>
         The site gets all images randomly from{" "}
