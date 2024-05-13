@@ -93,7 +93,8 @@ a.active {
 }
 
 #AboutPage {
-  width: 100%;
+  width: 50%;
+  margin: 4rem auto;
 }
 
 #AboutPage p {
