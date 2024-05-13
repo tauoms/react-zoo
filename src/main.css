@@ -121,15 +121,19 @@ nav ul li {
   margin: 0 1rem;
 }
 
-header input,
-header button {
+.searcharea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchbar,
+.searcharea button {
   border-radius: 8px;
   padding: 6px;
   border: 1px solid #c2d3cd;
-  margin-right: 12px;
-}
-
-header input[type="text"] {
+  margin: 4rem 0.5rem 1rem;
   background-color: #e4e0f2;
 }
 
