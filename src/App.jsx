@@ -30,33 +30,34 @@ function App() {
     }));
   };
 
-  const router = createBrowserRouter({
+  const routes = [
+    { path: "/", element: <HomePage /> },
+    {
+      path: "/",
+      element: <Root />,
+      children: [
+        {
+          path: ":category",
+          element: (
+            <CategoryPage
+              addLike={likesHandler}
+              removeLike={likesHandler}
+              removeCard={removeHandler}
+              {...zoo}
+            />
+          ),
+        },
+        { path: "/about", element: <AboutPage /> },
+        {
+          path: ":category/:name",
+          element: <AnimalPage {...zoo} />,
+        },
+      ],
+    },
+  ];
+
+  const router = createBrowserRouter(routes, {
     basename: "/react-zoo",
-    routes: [
-      { path: "/", element: <HomePage /> },
-      {
-        path: "/",
-        element: <Root />,
-        children: [
-          {
-            path: ":category",
-            element: (
-              <CategoryPage
-                addLike={likesHandler}
-                removeLike={likesHandler}
-                removeCard={removeHandler}
-                {...zoo}
-              />
-            ),
-          },
-          { path: "about", element: <AboutPage /> },
-          {
-            path: ":category/:name",
-            element: <AnimalPage {...zoo} />,
-          },
-        ],
-      },
-    ],
   });
 
   return <RouterProvider router={router} />;
