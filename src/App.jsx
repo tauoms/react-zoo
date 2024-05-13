@@ -9,7 +9,6 @@ import AnimalPage from "./routes/AnimalPage";
 
 function App() {
   const [zoo, setZoo] = useState({ animals, birds, insects, fishes });
-  const [filteredData, setFilteredData] = useState(null);
 
   const likesHandler = (name, category, action) => {
     // console.log(name, category, action, `likesHandler button clicked`);
@@ -31,31 +30,12 @@ function App() {
     }));
   };
 
-  const debounce = (func, delay) => {
-    let debounceTimer;
-    return function () {
-      const context = this;
-      const args = arguments;
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => func.apply(context, args), delay);
-    };
-  };
-
-  const search = debounce((searchInput, category) => {
-    console.log("search triggered");
-    setFilteredData(
-      zoo[category].filter((el) =>
-        el.name.toLowerCase().includes(searchInput.toLowerCase())
-      )
-    );
-  }, 300);
-
   const router = createBrowserRouter([
     { path: "/", element: <HomePage /> },
     {
       path: "/",
       // errorElement: <ErrorPage />,
-      element: <Root search={search} />,
+      element: <Root />,
       children: [
         {
           path: ":category",
@@ -65,7 +45,6 @@ function App() {
               removeLike={likesHandler}
               removeCard={removeHandler}
               {...zoo}
-              filteredData={filteredData}
             />
           ),
         },

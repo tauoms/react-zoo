@@ -1,20 +1,6 @@
-import { NavLink, Link, useParams } from "react-router-dom";
-import { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 
-const Header = ({ search }) => {
-  const [searchInput, setSearchInput] = useState("");
-  let { category } = useParams();
-
-  const handleSearchInputChange = (event) => {
-    setSearchInput(event.target.value);
-    search(searchInput, category);
-  };
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   search(searchInput, category);
-  // };
-
+const Header = () => {
   return (
     <>
       <header>
@@ -44,12 +30,7 @@ const Header = ({ search }) => {
           </ul>
         </nav>
         <form>
-          <input
-            type="text"
-            placeholder="Search..."
-            value={searchInput}
-            onChange={handleSearchInputChange}
-          />
+          <input type="text" placeholder="Search..." />
           <button>Reset</button>
         </form>
       </header>

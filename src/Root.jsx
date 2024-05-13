@@ -2,10 +2,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
 
-const Root = ({ search }) => {
+const Root = () => {
   return (
     <>
-      <Header search={search} />
+      <Header />
       <main>
         <Outlet />
       </main>

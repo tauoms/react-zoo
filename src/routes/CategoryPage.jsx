@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import Card from "../components/Card";
-import { useState } from "react";
 
 const CategoryPage = ({
   removeCard,
@@ -13,11 +12,9 @@ const CategoryPage = ({
 
   const categoryItems = rest[category];
 
-  const itemsToRender = filteredData ? filteredData : categoryItems;
-
   return (
     <>
-      {itemsToRender.map((item) => (
+      {categoryItems.map((item) => (
         <Card
           key={item.name}
           name={item.name}

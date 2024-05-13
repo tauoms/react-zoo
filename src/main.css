@@ -92,6 +92,18 @@ a.active {
   object-fit: cover;
 }
 
+#AboutPage {
+  width: 100%;
+}
+
+#AboutPage p {
+  margin-top: 1rem;
+}
+
+#AboutPage a {
+  text-decoration: underline;
+}
+
 header {
   display: flex;
   align-items: center;
