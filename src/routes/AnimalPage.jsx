@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import BackButton from "../components/BackButton";
 
 const AnimalPage = ({ ...rest }) => {
   const params = useParams();
@@ -54,9 +55,10 @@ const AnimalPage = ({ ...rest }) => {
           src={`https://source.unsplash.com/random/400×400/?${data.name}`}
           alt={`Photo of ${data.name}`}
         />
-        <h3>This animal has {data.likes} likes.</h3>
-        <div>{error ? <p>{error}</p> : <p>{paragraph}</p>}</div>
       </div>
+      <h3>This animal has {data.likes} likes.</h3>
+      <div>{error ? <p>{error}</p> : <p>{paragraph}</p>}</div>
+      <BackButton category={params.category} />
     </div>
   );
 };
