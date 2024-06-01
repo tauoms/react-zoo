@@ -57,7 +57,7 @@ const AnimalPage = ({ ...rest }) => {
         />
       </div>
       <h3>This animal has {data.likes} likes.</h3>
-      <div>{error ? <p>{error}</p> : <p>{paragraph}</p>}</div>
+      <div className="wiki">{error ? <p>{error}</p> : <p>{paragraph}</p>}</div>
       <BackButton category={params.category} />
     </div>
   );

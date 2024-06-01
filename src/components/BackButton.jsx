@@ -8,7 +8,11 @@ const BackButton = ({ category }) => {
     navigate(`/${category}`);
   };
 
-  return <button onClick={goBack}>Back</button>;
+  return (
+    <button className="back-btn" onClick={goBack}>
+      Back
+    </button>
+  );
 };
 
 export default BackButton;
