@@ -9,6 +9,10 @@ const AboutPage = () => {
         paragraph on animal page is fetched from wikipedia.
       </p>
       <p>
+        Some of the new things I learned during this project: How to use the
+        React router, how to pass and destructure props,
+      </p>
+      <p>
         The site gets all images randomly from{" "}
         <a href="https://unsplash.com/">Unsplash</a>.
       </p>
