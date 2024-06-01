@@ -1,7 +1,6 @@
 # React Zoo App
 
-A practice React app with add/remove likes and remove card
-functionality. Animals can be browsed by category. Each animal has its own page (click "More info" in card) with a back button. Info paragraph on animal page is fetched from wikipedia.
+This is a practice React app with add/remove likes, remove card and search functionality. Animals can be browsed by category. Each animal has its own page (click "More info" in card) with a back button. Info paragraph on animal page is fetched from wikipedia.
 
 ## Technologies used
 
